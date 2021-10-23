@@ -1,8 +1,5 @@
 import * as React from "react";
-// import Header from "../components/Header";
-// import LottieAnimation from "../Lottie";
-// import background from "../Animations/background.json";
-// import backgroundAnimation from "../Animations/background-animation.json";
+
 
 const tracks = [
   {
@@ -47,15 +44,10 @@ function Options(props) {
   let options = React.useContext(userOptions);
   let [shuffl, setShuffle] = React.useState(options.shuffle);
   let [repet, setRepeat] = React.useState(options.repeat);
+  
   let [fav, setFav] = React.useState(tracks[props.idx].favorited);
-
-  React.useEffect(() =>{
-    function func4(){
-      setFav(tracks[props.idx].favorited)
-    }
-    func4();
-    // eslint-disable-next-line
-  }  ,[]);
+  // eslint-disable-next-line
+  React.useEffect(() => setFav(tracks[props.idx].favorited));
 
   function shuffle() {
     options.shuffle = !options.shuffle;
@@ -283,7 +275,7 @@ function Progress(props) {
   setInterval(() => {
     setLength(Math.ceil(player.duration));
     setCurrLength(Math.ceil(player.currentTime));
-    // let secPerPx = Math.ceil(player.duration) / 280;
+    //let secPerPx = Math.ceil(player.duration) / 280;
 
     if (player.currentTime === player.duration) {
       if (options.shuffle === true) {
@@ -338,22 +330,19 @@ function Container() {
   let [idx, setIdx] = React.useState(0);
   let [playState, setPlayState] = React.useState(false);
   let oldIdx = React.useRef(idx);
+  // eslint-disable-next-line
   React.useEffect(() => {
-    function func5() {
-      if (playState === true) player.play();
-      else player.pause();
-      if (idx !== oldIdx.current) {
-        player.pause();
-        player.src = tracks[idx].source;
-        player.load();
-        player.play();
-        setPlayState(true);
-        oldIdx.current = idx;
-      }
+    if (playState === true) player.play();
+    else player.pause();
+    if (idx !== oldIdx.current) {
+      player.pause();
+      player.src = tracks[idx].source;
+      player.load();
+      player.play();
+      setPlayState(true);
+      oldIdx.current = idx;
     }
-    func5();
-   // eslint-disable-next-line
-  },[]);
+  });
 
   return (
     <div className="playerContaier">
