@@ -36,7 +36,7 @@ function SignUp() {
       history.goBack();
     }
     dispatch(cleanStateAction())
-  },[currentUser.isLoggedIn,dispatch,history])
+  },[])
 
   useEffect(()=>{
     if(currentUser.isLoggedIn)
@@ -51,7 +51,7 @@ function SignUp() {
         history.push('/signin');
       },2000)
     }
-  },[currentUser,history])
+  },[currentUser])
 
 
   return (

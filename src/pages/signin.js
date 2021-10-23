@@ -37,7 +37,7 @@ function SignIn() {
       history.goBack();
     }
     dispatch(cleanStateAction());
-  }, [currentUser.isLoggedIn, dispatch, history]);
+  }, []);
 
   useEffect(()=>{
     if(currentUser.isLoggedIn)
@@ -46,7 +46,7 @@ function SignIn() {
         history.push('/userdashboard');
       },2000)
     }
-  }, [currentUser, history]);
+  }, [currentUser]);
 
   return (
     <div className="">
