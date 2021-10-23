@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Header() {
     return (
       <header className="body-font sm:px-20 fixed z-10 w-full bg-light">

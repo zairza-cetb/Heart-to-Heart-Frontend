@@ -1,3 +1,5 @@
+import React from 'react';
+
 function Features() {
     return (
       <section className="relative text-gray-600 body-font sm:px-20">

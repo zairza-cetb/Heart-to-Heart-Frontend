@@ -1,5 +1,6 @@
 import { useHistory } from "react-router-dom";
 import Alone from "../Vectors/Alone-cuate.svg";
+import React from 'react';
 
 function Hero() {
     const history = useHistory();
