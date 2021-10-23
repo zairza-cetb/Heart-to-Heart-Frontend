@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+<h1 align="center">Heart-to-Heart</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img alt="React" src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"/><img alt="Redux" src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white"/><img alt="NodeJS" src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"/><img alt="MongoDB" src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"/><img alt="TailwindCSS" src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white"/> 
+</p>
+<h4 align="center">(<a href="https://github.com/Rupayan789/Heart-to-Heart-Frontend">Frontend</a> / <a href="https://github.com/Rupayan789/Backend-Heart-to-Heart">Backend</a>)</h4>
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [About the Project](#about-the-project)
+  - [Highlights](#highlights)
+  - [Features](#features)
+  - [Demo](#Demo)
+- [How to use the App](#how-to-use-the-app)
+- [Future Enhancement](#features-that-we-are-planning-to-add)
+- [License](#license)
+- [Our team](#geeks-behind-this)
 
-### `npm start`
+## About The Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+#### A Complete App for Mental Health Help
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[Heart-To-Heart](https://spark-healthlines.vercel.app/) is a modern-day designed, enhanced user experience, multi-functional, mobile ready app developed to help people improve their mental health and get a fresh motivation.
 
-### `npm test`
+> Many people find it difficult to reach other out for help for any mental issues,
+> they have a fear in their minds to be judged,
+> they don't get a proper solution to recover
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### Our Solution
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In our project, we have focussed on creating a platform where a person can vent out his/her thoughts, emotions or feelings. S/he can know their analysis of their emotions and how they feel at the moment. We have used Symbl.AI to analyze the sentiments and provide a report which they can send anonymously to a therapist and seek help. Apart from that we have developed certain features in our app which would help a person to recover and improve his/her mental health such as a 21 Days Challenge feature, pen-down-your-thoughts feature, a chatbot, a music player and motivational resources feature.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Demo
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Click [here](https://www.youtube.com/watch?v=tjcLdrwBgHY) to see the workflow of the whole project.
 
-### `npm run eject`
+### Highlights
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+✨ Speak out your thoughts, vent out your emotions and improve your mental health </br>
+✨ Know your emotions, analyze, take activites or chat with a bot </br>
+✨ Take our curated 21 Days Challenge to improve your mental health
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Speak out about your feelings here if you feel uncomfortable to share with other
+- Get an analysis of your feelings and receive a complete report
+- Can share the report with a professional therapist and seek help
+- Take a 21 days challenge where you can complete quests and that would help you improve your mental health
+- Talk with a chatbot - Alex and feel better
+- Listen to soothing music when unsettled
+- Can pen-down-your-thoughts
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Features that we are planning to add in future:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Make a blog section where people can post their stories which would benefit and motivate others
+- Add authentication for therapists and arrange virtual meetings for help
+- Anonymously get consultations from therapists
+- Improvise the chatbot
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Distributed under the GNU License. See `LICENSE.md` for more information.
