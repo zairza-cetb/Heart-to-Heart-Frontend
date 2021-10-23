@@ -16,7 +16,7 @@ function Resources() {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 grid-rows-3 lg:grid-rows-1 gap-4 mt-10 mb-20">
         <div className="bg-white rounded-lg flex flex-col container pb-8 mx-auto items-center">
-          <img src={Anxiety} alt="" className="rounded-t-lg" alt="YouTube1" />
+          <img src={Anxiety} className="rounded-t-lg" alt="YouTube1" />
           <div className="p-6">
             <h2 className="font-bold mb-2 text-2xl text-tertiary">
               How to Cope Up with Anxiety
@@ -31,7 +31,7 @@ function Resources() {
         </div>
 
         <div className="bg-white rounded-lg flex flex-col container pb-8 mx-auto items-center">
-          <img src={MentalHealth} alt="" className="rounded-t-lg" alt="YouTube1" />
+          <img src={MentalHealth} className="rounded-t-lg" alt="YouTube1" />
           <div className="p-6">
             <h2 className="font-bold mb-2 text-2xl text-tertiary">
               How to improve your Mental Health
@@ -46,7 +46,7 @@ function Resources() {
         </div>
 
         <div className="bg-white rounded-lg flex flex-col container pb-8 mx-auto items-center">
-          <img src={Schizophrenia} alt="" className="rounded-t-lg" alt="YouTube1" />
+          <img src={Schizophrenia} className="rounded-t-lg" alt="YouTube1" />
           <div className="p-6">
             <h2 className="font-bold mb-2 text-2xl text-tertiary">
               What They Don't Tell You About Mental Illness

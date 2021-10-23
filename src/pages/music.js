@@ -277,7 +277,7 @@ function Progress(props) {
   setInterval(() => {
     setLength(Math.ceil(player.duration));
     setCurrLength(Math.ceil(player.currentTime));
-    let secPerPx = Math.ceil(player.duration) / 280;
+    // let secPerPx = Math.ceil(player.duration) / 280;
 
     if (player.currentTime === player.duration) {
       if (options.shuffle === true) {

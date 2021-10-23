@@ -20,9 +20,9 @@ function UserDashboard() {
   const dispatch = useDispatch();
   const [tab, setTab] = useState(1);
   const [loading,setLoading] = useState(false);
-  const [open, setOpen] = React.useState(
-    "sidebar bg-white w-60 text-secondary-100 px-2 fixed inset-y-0 left-0 transform -translate-x-full md:translate-x-0 transition duration-200 ease-in-out"
-  );
+  // const [open, setOpen] = React.useState(
+  //   "sidebar bg-white w-60 text-secondary-100 px-2 fixed inset-y-0 left-0 transform -translate-x-full md:translate-x-0 transition duration-200 ease-in-out"
+  // );
 
   useEffect(()=>{
     if(!currentUser.isLoggedIn)
@@ -79,8 +79,7 @@ function UserDashboard() {
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="feather feather-heart"
-              className="text-tertiary h-6 w-6 mt-1 ml-2"
+              className="feather feather-heart text-tertiary h-6 w-6 mt-1 ml-2"
               onClick={(e) => setTab(1)}
             >
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
@@ -174,7 +173,7 @@ function UserDashboard() {
           </div>
         </div>
 
-        <div className={open}>
+        <div className="sidebar bg-white w-60 text-secondary-100 px-2 fixed inset-y-0 left-0 transform -translate-x-full md:translate-x-0 transition duration-200 ease-in-out">
           <div className="logo text-xl font-extrabold text-tertiary px-4 mt-5 flex p-5 bg-white">
             Heart-to-Heart
             <svg
@@ -187,8 +186,7 @@ function UserDashboard() {
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="feather feather-heart"
-              className="text-tertiary mt-1 ml-2"
+              className="feather feather-heart text-tertiary mt-1 ml-2"
             >
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
             </svg>

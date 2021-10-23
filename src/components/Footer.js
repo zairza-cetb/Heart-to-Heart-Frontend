@@ -16,8 +16,7 @@ function Footer() {
             strokeWidth="3"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="feather feather-heart"
-            className="text-white"
+            className="feather feather-heart text-white"
           ></svg>
             <span className="ml-3 text-xl">Heart-To-Heart</span>
           </a>

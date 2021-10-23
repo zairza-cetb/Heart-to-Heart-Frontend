@@ -20,7 +20,7 @@ function Talk() {
       const [ws,setWs] = useState(null)
       const [loading,setLoading] =useState(false)
       const profilePatient = useSelector(state => state.patientReducer);
-      const [error,setError] = useState(null)
+      // const [error,setError] = useState(null)
       // const [notification,setNotification] = useState(null)
       const [selectedFile,setSelectedFile] = useState(null);
       const [happy,setHappy] = useState(0);
@@ -92,7 +92,6 @@ function Talk() {
     
           ws.onerror  = (err) => {
             console.error(err);
-            setError(err)
             toast.error(err, {
               position: "top-right",
               autoClose: 2000,
@@ -275,7 +274,7 @@ function Talk() {
           //console.log(resp)
           //console.log("In Fetch Message")
           if (response.ok) {
-            let rows = "";
+            // let rows = "";
             let trans=[];
             // Initialize tracker.
             for (let message of resp.messages) {
@@ -283,12 +282,12 @@ function Talk() {
               if (cacheTable.indexOf(message.id) === -1) {
                 //console.log('Polarity: ', score);
               }
-              rows += `
-                <tr>
-                  <td>${message.id}</td>
-                  <td>${score}</td>
-                </tr>
-              `
+              // rows += `
+              //   <tr>
+              //     <td>${message.id}</td>
+              //     <td>${score}</td>
+              //   </tr>
+              // `
 
               trans.push({
                 message:message.text,
