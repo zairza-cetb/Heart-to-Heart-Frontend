@@ -53,7 +53,7 @@ function Talk() {
           setLoading(false)
           setEnd(true)
         }
-      },[transcripts])
+      },[transcripts, profilePatient.age, profilePatient.city, profilePatient.name])
 
       // useEffect(()=>{
       //   if((end && transcripts.length>0 ))
