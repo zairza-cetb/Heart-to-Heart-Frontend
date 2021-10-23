@@ -23,7 +23,8 @@ const ProfilePatient = ({handleTab}) => {
         dispatch(patientRegisterAction({name,email:currentUser.email,phoneno,dob,city,pincode,age}))
     }
     useEffect(() => {
-      if(currentUser.isRegistered)
+      function func6(){
+        if(currentUser.isRegistered)
       {
         setIsUpdated(true)
         setName(patientProfile.name)
@@ -35,7 +36,10 @@ const ProfilePatient = ({handleTab}) => {
       }
       else
       setIsUpdated(false)
-    },[currentUser.isRegistered,patientProfile.name,patientProfile.phoneno,patientProfile.age,patientProfile.city,patientProfile.dob,patientProfile.pincode]);
+      }
+      func6();
+      // eslint-disable-next-line
+    },[]);
 
     useEffect(()=>{
       function callback(){
@@ -63,7 +67,8 @@ const ProfilePatient = ({handleTab}) => {
       };
       if(clicked)
       callback();
-    },[patientProfile,clicked,handleTab,isUpdated,patientProfile.updateSuccess,patientProfile.name,patientProfile.phoneno,patientProfile.age,patientProfile.city,patientProfile.dob,patientProfile.pincode])
+      // eslint-disable-next-line
+    },[patientProfile])
 
   return (
     <div className="pt-10 px-5 pb-5">

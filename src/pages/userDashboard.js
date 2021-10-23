@@ -25,18 +25,27 @@ function UserDashboard() {
   // );
 
   useEffect(()=>{
-    if(!currentUser.isLoggedIn)
+    function func(){
+      if(!currentUser.isLoggedIn)
     history.goBack();
     dispatch(getPatientDetailsAction(currentUser.email))
+    }
+    func();
+    // eslint-disable-next-line
   },[currentUser.email,currentUser.isLoggedIn,dispatch,history])
 
   useEffect(()=>{
-    if(!currentUser.isRegistered)
-    setTab(2);
-  },[tab,currentUser.isRegistered])
+    function func(){
+      if(!currentUser.isRegistered)
+      setTab(2);
+    }
+    func();
+    // eslint-disable-next-line
+  },[tab])
 
   useEffect(()=>{
-    if(!currentUser.isLoggedIn)
+    function func(){
+      if(!currentUser.isLoggedIn)
     {
       setLoading(false)
       history.push('/');
@@ -54,7 +63,10 @@ function UserDashboard() {
         progress: undefined,
         });
     }
-  },[currentUser,history])
+    }
+    func();
+    // eslint-disable-next-line
+  },[currentUser])
 
   const handleLogout = async () => {
     setLoading(true)

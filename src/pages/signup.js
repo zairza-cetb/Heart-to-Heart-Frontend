@@ -31,15 +31,20 @@ function SignUp() {
   }
 
   useEffect(()=>{
-    if(currentUser.isLoggedIn)
+    function func(){
+      if(currentUser.isLoggedIn)
     {
       history.goBack();
     }
     dispatch(cleanStateAction())
+    }
+    func();
+   // eslint-disable-next-line 
   },[])
 
   useEffect(()=>{
-    if(currentUser.isLoggedIn)
+    function func(){
+      if(currentUser.isLoggedIn)
     {
       setTimeout(()=>{
         history.push('/userdashboard');
@@ -51,6 +56,9 @@ function SignUp() {
         history.push('/signin');
       },2000)
     }
+    }
+    func();
+    // eslint-disable-next-line
   },[currentUser])
 
 

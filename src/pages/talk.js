@@ -35,7 +35,8 @@ function Talk() {
       };
 
       useEffect(()=>{
-        if(transcripts.length>0)
+        function func(){
+          if(transcripts.length>0)
         {
           setData({
             transcripts:transcripts,
@@ -53,7 +54,10 @@ function Talk() {
           setLoading(false)
           setEnd(true)
         }
-      },[transcripts, profilePatient.age, profilePatient.city, profilePatient.name])
+        }
+        func();
+        // eslint-disable-next-line
+      },[transcripts])
 
       // useEffect(()=>{
       //   if((end && transcripts.length>0 ))
@@ -62,115 +66,119 @@ function Talk() {
       //console.log(__dirname)
 
       useEffect(()=>{
-        async function webSocketSetup(){
+        function func(){
+          async function webSocketSetup(){
         
-          if(ws)
-        {
-          let conversationId;
-          ws.onmessage = async (event) => {
-  
-            const data = JSON.parse(event.data);
-            if (data.type === 'message' && data.message.hasOwnProperty('data')) {
-              conversationId = data.message.data.conversationId;
-              setConvId(conversationId);
-            }
-            // if (data.type === 'topic_response') {
-            //   for (let topic of data.topics) {
-            //     // console.log('Topic detected: ', topic.phrases)
-            //   }
-            // }
-            // if (data.type === 'insight_response') {
-            //   for (let insight of data.insights) {
-            //    // console.log('Insight detected: ', insight.payload.content);
-            //   }
-            // }
-            // if (data.type === 'message' && data.message.hasOwnProperty('punctuated')) {
-            //   //console.log('Live transcript: ', data.message.punctuated.transcript);
-            // }
+            if(ws)
+          {
+            let conversationId;
+            ws.onmessage = async (event) => {
     
-          };
-    
-          ws.onerror  = (err) => {
-            console.error(err);
-            toast.error(err, {
-              position: "top-right",
-              autoClose: 2000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              });
-          };
-          // Fired when the WebSocket connection has been closed
-          ws.onclose = (event) => {
-            console.info('Connection to websocket closed');
-            // setLoading(false)
-            // setStart(false);
-            // setEnd(false)
-            toast.info('Connection to websocket closed', {
-              position: "top-right",
-              autoClose: 2000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              });
-          };
-          // Fired when the connection succeeds.
-          ws.onopen = (event) => {
-            setStart(true)
-            setEnd(false)
-            ws.send(JSON.stringify({
-              type: 'start_request',
-              meetingTitle: 'Websockets How-to', // Conversation name
-              insightTypes: ['question', 'action_item'], // Will enable insight generation
-              config: {
-                confidenceThreshold: 0.5,
-                languageCode: 'en-US',
-                speechRecognition: {
-                  encoding: 'LINEAR16',
-                  sampleRateHertz: 44100,
-                }
-              },
-              speaker: {
-                userId: 'example@symbl.ai',
-                name: 'Example Sample',
+              const data = JSON.parse(event.data);
+              if (data.type === 'message' && data.message.hasOwnProperty('data')) {
+                conversationId = data.message.data.conversationId;
+                setConvId(conversationId);
               }
-            }));
-          };
-          const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
-
-          const handleSuccess = (stream) => {
-            const AudioContext = window.AudioContext;
-            const context = new AudioContext();
-            const source = context.createMediaStreamSource(stream);
-            const processor = context.createScriptProcessor(1024, 1, 1);
-            const gainNode = context.createGain();
-            source.connect(gainNode);
-            gainNode.connect(processor);
-            processor.connect(context.destination);
-            processor.onaudioprocess = (e) => {
-              // convert to 16-bit payload
-              const inputData = e.inputBuffer.getChannelData(0) || new Float32Array(this.bufferSize);
-              const targetBuffer = new Int16Array(inputData.length);
-              for (let index = inputData.length; index > 0; index--) {
-                  targetBuffer[index] = 32767 * Math.min(1, inputData[index]);
-              }
-              // Send audio stream to websocket.
-              if (ws.readyState === WebSocket.OPEN) {
-                ws.send(targetBuffer.buffer);
-              }
+              // if (data.type === 'topic_response') {
+              //   for (let topic of data.topics) {
+              //     // console.log('Topic detected: ', topic.phrases)
+              //   }
+              // }
+              // if (data.type === 'insight_response') {
+              //   for (let insight of data.insights) {
+              //    // console.log('Insight detected: ', insight.payload.content);
+              //   }
+              // }
+              // if (data.type === 'message' && data.message.hasOwnProperty('punctuated')) {
+              //   //console.log('Live transcript: ', data.message.punctuated.transcript);
+              // }
+      
             };
+      
+            ws.onerror  = (err) => {
+              console.error(err);
+              toast.error(err, {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+            };
+            // Fired when the WebSocket connection has been closed
+            ws.onclose = (event) => {
+              console.info('Connection to websocket closed');
+              // setLoading(false)
+              // setStart(false);
+              // setEnd(false)
+              toast.info('Connection to websocket closed', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                });
+            };
+            // Fired when the connection succeeds.
+            ws.onopen = (event) => {
+              setStart(true)
+              setEnd(false)
+              ws.send(JSON.stringify({
+                type: 'start_request',
+                meetingTitle: 'Websockets How-to', // Conversation name
+                insightTypes: ['question', 'action_item'], // Will enable insight generation
+                config: {
+                  confidenceThreshold: 0.5,
+                  languageCode: 'en-US',
+                  speechRecognition: {
+                    encoding: 'LINEAR16',
+                    sampleRateHertz: 44100,
+                  }
+                },
+                speaker: {
+                  userId: 'example@symbl.ai',
+                  name: 'Example Sample',
+                }
+              }));
+            };
+            const stream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+  
+            const handleSuccess = (stream) => {
+              const AudioContext = window.AudioContext;
+              const context = new AudioContext();
+              const source = context.createMediaStreamSource(stream);
+              const processor = context.createScriptProcessor(1024, 1, 1);
+              const gainNode = context.createGain();
+              source.connect(gainNode);
+              gainNode.connect(processor);
+              processor.connect(context.destination);
+              processor.onaudioprocess = (e) => {
+                // convert to 16-bit payload
+                const inputData = e.inputBuffer.getChannelData(0) || new Float32Array(this.bufferSize);
+                const targetBuffer = new Int16Array(inputData.length);
+                for (let index = inputData.length; index > 0; index--) {
+                    targetBuffer[index] = 32767 * Math.min(1, inputData[index]);
+                }
+                // Send audio stream to websocket.
+                if (ws.readyState === WebSocket.OPEN) {
+                  ws.send(targetBuffer.buffer);
+                }
+              };
+          
+              document.querySelector("#start-instructions").innerHTML = "Start speaking now ...";
+            };
+            handleSuccess(stream);
+          }
+  
+          }
+          webSocketSetup();
+        }
+        func();
         
-            document.querySelector("#start-instructions").innerHTML = "Start speaking now ...";
-          };
-          handleSuccess(stream);
-        }
-
-        }
-        webSocketSetup();
         
       },[ws])
 

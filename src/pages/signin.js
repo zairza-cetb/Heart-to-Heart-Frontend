@@ -33,19 +33,27 @@ function SignIn() {
     );
   };
   useEffect(() => {
-    if (currentUser.isLoggedIn) {
-      history.goBack();
+    function func(){
+      if (currentUser.isLoggedIn) {
+        history.goBack();
+      }
+      dispatch(cleanStateAction());
     }
-    dispatch(cleanStateAction());
+    func();
+    // eslint-disable-next-line
   }, []);
 
   useEffect(()=>{
-    if(currentUser.isLoggedIn)
+    function func(){
+      if(currentUser.isLoggedIn)
     {
       setTimeout(()=>{
         history.push('/userdashboard');
       },2000)
     }
+    }
+    func();
+    // eslint-disable-next-line
   }, [currentUser]);
 
   return (

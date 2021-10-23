@@ -49,7 +49,13 @@ function Options(props) {
   let [repet, setRepeat] = React.useState(options.repeat);
   let [fav, setFav] = React.useState(tracks[props.idx].favorited);
 
-  React.useEffect(() => setFav(tracks[props.idx].favorited),[props.idx]);
+  React.useEffect(() =>{
+    function func4(){
+      setFav(tracks[props.idx].favorited)
+    }
+    func4();
+    // eslint-disable-next-line
+  }  ,[]);
 
   function shuffle() {
     options.shuffle = !options.shuffle;
@@ -333,17 +339,21 @@ function Container() {
   let [playState, setPlayState] = React.useState(false);
   let oldIdx = React.useRef(idx);
   React.useEffect(() => {
-    if (playState === true) player.play();
-    else player.pause();
-    if (idx !== oldIdx.current) {
-      player.pause();
-      player.src = tracks[idx].source;
-      player.load();
-      player.play();
-      setPlayState(true);
-      oldIdx.current = idx;
+    function func5() {
+      if (playState === true) player.play();
+      else player.pause();
+      if (idx !== oldIdx.current) {
+        player.pause();
+        player.src = tracks[idx].source;
+        player.load();
+        player.play();
+        setPlayState(true);
+        oldIdx.current = idx;
+      }
     }
-  },[playState, idx]);
+    func5();
+   // eslint-disable-next-line
+  },[]);
 
   return (
     <div className="playerContaier">

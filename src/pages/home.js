@@ -15,10 +15,14 @@ function Home() {
     const currentUser = useSelector(state => state.authReducer)
 
     useEffect(() => {
-        if(currentUser.email && !currentUser.isLogout)
-        history.goBack();
-        dispatch(cleanStateAction());
-    }, [currentUser.email,currentUser.isLogout,dispatch,history])
+        function func3(){
+            if(currentUser.email && !currentUser.isLogout)
+            history.goBack();
+            dispatch(cleanStateAction());
+        }
+        func3();
+        // eslint-disable-next-line
+    }, [])
     return (
         <div className="">
             <Header />

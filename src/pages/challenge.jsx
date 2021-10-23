@@ -12,39 +12,47 @@ const Challenge = () => {
     const dispatch = useDispatch();
 
     useEffect(()=>{
-        var todayDate = new Date().toISOString().slice(0, 10);
-        var diff=0;
-        if(!profilePatient.startDate)
-        diff=0;
-        else
-        diff = Math.floor((Date.parse(todayDate) - Date.parse(profilePatient.startDate)) / 86400000);
-
-        if(diff+1===profilePatient.daysCompleted)
-        {
-            setCompleted(true);
-            setTodayTask(taskList[diff]);
-        }
-        if(profilePatient.name)
-        {
-            let t="";
-            if(profilePatient.daysCompleted>0)
-            {
-                t = taskList[parseInt(profilePatient.daysCompleted)-1];
-                setTodayTask(t);
-                setClicked(true);
-            }
+        function func1(){
+            var todayDate = new Date().toISOString().slice(0, 10);
+            var diff=0;
+            if(!profilePatient.startDate)
+            diff=0;
             else
-            setClicked(false);
+            diff = Math.floor((Date.parse(todayDate) - Date.parse(profilePatient.startDate)) / 86400000);
+
+            if(diff+1===profilePatient.daysCompleted)
+            {
+                setCompleted(true);
+                setTodayTask(taskList[diff]);
+            }
+            if(profilePatient.name)
+            {
+                let t="";
+                if(profilePatient.daysCompleted>0)
+                {
+                    t = taskList[parseInt(profilePatient.daysCompleted)-1];
+                    setTodayTask(t);
+                    setClicked(true);
+                }
+                else
+                setClicked(false);
+            }
         }
+        func1();
         
+        // eslint-disable-next-line
     },[profilePatient,isCompleted])
 
     useEffect(()=>{
-        if(isClicked && profilePatient.daysCompleted===0)
+        function func2(){
+          if(isClicked && profilePatient.daysCompleted===0)
         {
             setTodayTask(taskList[0]);
+        }  
         }
-    },[isClicked,profilePatient.daysCompleted])
+        func2();
+        // eslint-disable-next-line
+    },[isClicked])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
