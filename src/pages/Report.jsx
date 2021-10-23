@@ -1,6 +1,6 @@
 import React from 'react'
 import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-import ReactPDF from '@react-pdf/renderer';
+
 const Report = (props) => {
 
     const styles = StyleSheet.create({
@@ -74,8 +74,8 @@ const Report = (props) => {
           </View>
           <View>
           {
-              transcripts.map(item=>(
-                <View style={styles.tableRow}>
+              transcripts.map((item,key)=>(
+                <View key={key} style={styles.tableRow}>
             
                   <Text>
                     {item.message}

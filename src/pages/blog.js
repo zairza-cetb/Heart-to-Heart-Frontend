@@ -5,7 +5,7 @@ import "react-markdown-editor-lite/lib/index.css";
 import LottieAnimation from "../Lottie";
 import background from "../Animations/background.json";
 import backgroundAnimation from "../Animations/background-animation.json";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 
 function Blog() {
   const mdParser = new MarkdownIt();

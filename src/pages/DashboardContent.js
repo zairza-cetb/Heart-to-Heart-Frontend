@@ -1,28 +1,28 @@
 import React from "react";
 import FeelingBlue from "../Vectors/Feeling Blue-bro.svg";
 import TrueFriends from "../Vectors/Solidarity-cuate.png";
-import Conversation from "../Vectors/Conversation-pana.png";
+// import Conversation from "../Vectors/Conversation-pana.png";
 import Challenge from "../Vectors/ProblemSolving-bro.png";
 import Chat from "../Vectors/ChatBot-pana.png";
 import ChatBot from "./chat";
 import CassettePlayer from "../Vectors/CassettePlayer-pana.png";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 function DashboardContent(props) {
-  let history = useHistory();
+//   let history = useHistory();
 
-  const handleChange = () => {
-    props.setTab(5);
-  };
+//   const handleChange = () => {
+//     props.setTab(5);
+//   };
 
 
-  const handleBlog = () => {
-    props.setTab(6);
-  };
+//   const handleBlog = () => {
+//     props.setTab(6);
+//   };
 
-  const handleTalk = () => {
-    props.setTab(3);
-  };
+//   const handleTalk = () => {
+//     props.setTab(3);
+//   };
 
   const [showModal, setShowModal] = React.useState(false);
 

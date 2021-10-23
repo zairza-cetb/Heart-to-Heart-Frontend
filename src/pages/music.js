@@ -1,8 +1,8 @@
 import * as React from "react";
-import Header from "../components/Header";
-import LottieAnimation from "../Lottie";
-import background from "../Animations/background.json";
-import backgroundAnimation from "../Animations/background-animation.json";
+// import Header from "../components/Header";
+// import LottieAnimation from "../Lottie";
+// import background from "../Animations/background.json";
+// import backgroundAnimation from "../Animations/background-animation.json";
 
 const tracks = [
   {

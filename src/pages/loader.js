@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { css } from "@emotion/react";
 import ScaleLoader from "react-spinners/ScaleLoader";
 const Loader = (props) => {

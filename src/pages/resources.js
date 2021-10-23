@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Anxiety from "../Vectors/Anxiety-bro.png";
 import MentalHealth from "../Vectors/MentalHealth-pana.png";
 import Schizophrenia from "../Vectors/Schizophrenia-amico.png";

@@ -5,9 +5,9 @@ import Home from "./pages/home";
 import UserDashboard from "./pages/userDashboard";
 import SignUp from "./pages/signup";
 import SignIn from "./pages/signin";
-import Blog from "./pages/blog";
-import Index from "./pages/music"
-import Talk from "./pages/talk";
+// import Blog from "./pages/blog";
+// import Index from "./pages/music"
+// import Talk from "./pages/talk";
 import Resources from "./pages/resources";
 import Loader from "./pages/loader";
 

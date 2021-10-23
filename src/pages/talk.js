@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import Report from "./Report";
-import ReactPDF, { BlobProvider, PDFDownloadLink } from "@react-pdf/renderer";
+import { PDFDownloadLink } from "@react-pdf/renderer";
 import { useSelector } from "react-redux";
 import { toast, ToastContainer } from "react-toastify";
-import { css } from "@emotion/react";
-import ClipLoader from "react-spinners/ClipLoader";
+// import { css } from "@emotion/react";
+// import ClipLoader from "react-spinners/ClipLoader";
 import Loader from "./loader";
 import { reportUpload } from "../api/reportUploader";
 function Talk() {
-      const [open, setOpen] = React.useState(
-        "sidebar bg-light w-60 text-secondary-100 px-2 fixed inset-y-0 left-0 transform -translate-x-full md:translate-x-0 transition duration-200 ease-in-out"
-      );
+      // const [open, setOpen] = React.useState(
+      //   "sidebar bg-light w-60 text-secondary-100 px-2 fixed inset-y-0 left-0 transform -translate-x-full md:translate-x-0 transition duration-200 ease-in-out"
+      // );
       const [end,setEnd] = useState(false);
       const [start,setStart] = useState(false);
       const [data,setData] = useState(null);
@@ -21,7 +21,7 @@ function Talk() {
       const [loading,setLoading] =useState(false)
       const profilePatient = useSelector(state => state.patientReducer);
       const [error,setError] = useState(null)
-      const [notification,setNotification] = useState(null)
+      // const [notification,setNotification] = useState(null)
       const [selectedFile,setSelectedFile] = useState(null);
       const [happy,setHappy] = useState(0);
       const [neutral,setNeutral] = useState(0);

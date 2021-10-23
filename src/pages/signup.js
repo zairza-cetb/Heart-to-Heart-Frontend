@@ -1,6 +1,6 @@
 import React,{ useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { googleAuthPatient, signUpPatient } from "../api/authentication";
+// import { googleAuthPatient, signUpPatient } from "../api/authentication";
 import Login from "../Vectors/Sign in-amico.svg";
 import { GoogleLogin } from 'react-google-login';
 import { cleanStateAction, patientGoogleAuth, patientSignupAction } from "../redux/actions/userAuth";

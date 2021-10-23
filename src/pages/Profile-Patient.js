@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { registerPatient } from "../api/authentication";
+// import { registerPatient } from "../api/authentication";
 import { patientRegisterAction } from "../redux/actions/userAuth";
 
 const ProfilePatient = ({handleTab}) => {
