@@ -28,12 +28,12 @@ function UserDashboard() {
     if(!currentUser.isLoggedIn)
     history.goBack();
     dispatch(getPatientDetailsAction(currentUser.email))
-  },[])
+  },[currentUser.email,currentUser.isLoggedIn,dispatch,history])
 
   useEffect(()=>{
     if(!currentUser.isRegistered)
     setTab(2);
-  },[tab])
+  },[tab,currentUser.isRegistered])
 
   useEffect(()=>{
     if(!currentUser.isLoggedIn)
@@ -54,7 +54,7 @@ function UserDashboard() {
         progress: undefined,
         });
     }
-  },[currentUser])
+  },[currentUser,history])
 
   const handleLogout = async () => {
     setLoading(true)

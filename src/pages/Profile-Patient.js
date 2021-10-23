@@ -35,7 +35,7 @@ const ProfilePatient = ({handleTab}) => {
       }
       else
       setIsUpdated(false)
-    },[]);
+    },[currentUser.isRegistered,patientProfile.name,patientProfile.phoneno,patientProfile.age,patientProfile.city,patientProfile.dob,patientProfile.pincode]);
 
     useEffect(()=>{
       function callback(){
@@ -63,7 +63,7 @@ const ProfilePatient = ({handleTab}) => {
       };
       if(clicked)
       callback();
-    },[patientProfile])
+    },[patientProfile,clicked,handleTab,isUpdated,patientProfile.updateSuccess,patientProfile.name,patientProfile.phoneno,patientProfile.age,patientProfile.city,patientProfile.dob,patientProfile.pincode])
 
   return (
     <div className="pt-10 px-5 pb-5">

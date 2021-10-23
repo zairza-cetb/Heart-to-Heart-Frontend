@@ -49,7 +49,7 @@ function Options(props) {
   let [repet, setRepeat] = React.useState(options.repeat);
   let [fav, setFav] = React.useState(tracks[props.idx].favorited);
 
-  React.useEffect(() => setFav(tracks[props.idx].favorited));
+  React.useEffect(() => setFav(tracks[props.idx].favorited),[props.idx]);
 
   function shuffle() {
     options.shuffle = !options.shuffle;
@@ -343,7 +343,7 @@ function Container() {
       setPlayState(true);
       oldIdx.current = idx;
     }
-  });
+  },[playState, idx]);
 
   return (
     <div className="playerContaier">

@@ -44,7 +44,7 @@ const Challenge = () => {
         {
             setTodayTask(taskList[0]);
         }
-    },[isClicked])
+    },[isClicked,profilePatient.daysCompleted])
 
     const handleSubmit = async (e) => {
         e.preventDefault();

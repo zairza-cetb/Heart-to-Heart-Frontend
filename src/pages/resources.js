@@ -37,7 +37,7 @@ function Resources() {
               How to improve your Mental Health
             </h2>
             <a
-              href="#"
+              href="https://youtu.be/wOGqlVqyvCM"
               className="text-purple-600 hover:text-purple-500 underline text-sm"
             >
               Watch Now 👉

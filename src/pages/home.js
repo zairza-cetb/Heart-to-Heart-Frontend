@@ -18,7 +18,7 @@ function Home() {
         if(currentUser.email && !currentUser.isLogout)
         history.goBack();
         dispatch(cleanStateAction());
-    }, [])
+    }, [currentUser.email,currentUser.isLogout,dispatch,history])
     return (
         <div className="">
             <Header />
