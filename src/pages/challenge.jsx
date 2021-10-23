@@ -101,7 +101,7 @@ const Challenge = () => {
                             <div className="mt-5">
                                 <span className="text-2xl block">How will this improve ?</span>
                                 <div className="text-xl mt-5 text-gray-600 p-5 bg-gray-200 rounded-md">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus tenetur dicta, atque cumque odit quos est odio! Facere, enim. Ad illum nesciunt blanditiis quia repudiandae quidem veniam! Enim, ad voluptatem.
+                                    Doing our curated tasks will help you grow physically as well as mentally. You will feel contended from within and that will improve your mental health. It will motivate you to complete your goals.
                                 </div>
                             </div>
                             <div className="mt-5">
@@ -127,10 +127,10 @@ const Challenge = () => {
                 Welcome to the 21 days challenge
             </div>
             <div className="block w-11/12 bg-white py-5 pr-10 pl-5  rounded-r-3xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi modi cumque nobis aliquid repudiandae facilis accusamus veritatis repellendus magnam. Hic tempore magni laboriosam explicabo, dolorem impedit libero cumque natus molestiae.
+                Want to improve your mental health? Want to get rid of unwanted thoughts and develop a better habit? Want some motivation to complete your goals?
             </div>
             <div className="block w-11/12 bg-white py-5 pl-10 mt-10 rounded-l-3xl ml-auto">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus tenetur sequi cum harum praesentium nemo esse. Quam, molestiae qui. Itaque earum voluptate commodi et recusandae voluptates mollitia aspernatur fugiat inventore?
+                Here is a curated list of challenges that you can take on for 21 days and feel a way better and get a new fresh start with utmost zeal.
             </div>
             <div className="flex items-center justify-center" onClick={e => setClicked(true)}>
                 <button className="inline-flex text-tertiary font-semibold bg-primary border-0 py-2 px-6 focus:outline-none hover:opacity-80 rounded-full text-lg mt-5">
