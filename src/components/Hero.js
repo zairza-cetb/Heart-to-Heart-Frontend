@@ -1,6 +1,8 @@
+import { useHistory } from "react-router-dom";
 import Alone from "../Vectors/Alone-cuate.svg";
 
 function Hero() {
+    const history = useHistory();
   return (
     <section className="text-gray-600 bg-tertiary bg-opacity-25 body-font sm:px-2">
       <div className="container mx-auto flex px-5 md:space-x-7 py-28 md:flex-row flex-col items-center">
@@ -26,7 +28,7 @@ function Hero() {
             more better.
           </p>
           <div className="flex justify-center">
-            <button className="inline-flex text-white bg-tertiary border-0 py-2 px-6 focus:outline-none hover:opacity-80 rounded-full text-lg">
+            <button onClick={()=>history.push('/signup')} className="inline-flex text-white bg-tertiary border-0 py-2 px-6 focus:outline-none hover:opacity-80 rounded-full text-lg">
               Get started
             </button>
             <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-full text-lg">

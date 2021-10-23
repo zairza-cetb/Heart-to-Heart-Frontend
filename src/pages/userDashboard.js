@@ -10,12 +10,16 @@ import Talk from "./talk";
 import Resources from "./resources"
 import Loader from "./loader";
 import Challenge from "./challenge.jsx";
+import { toast } from "react-toastify";
+import { ToastContainer } from 'react-toastify';
+
 
 function UserDashboard() {
   const currentUser = useSelector(state => state.authReducer);
   const history = useHistory();
   const dispatch = useDispatch();
   const [tab, setTab] = useState(1);
+  const [loading,setLoading] = useState(false);
   const [open, setOpen] = React.useState(
     "sidebar bg-white w-60 text-secondary-100 px-2 fixed inset-y-0 left-0 transform -translate-x-full md:translate-x-0 transition duration-200 ease-in-out"
   );
@@ -34,14 +38,33 @@ function UserDashboard() {
   useEffect(()=>{
     if(!currentUser.isLoggedIn)
     {
+      setLoading(false)
       history.push('/');
+    }
+    else if(currentUser.isLogoutErr)
+    {
+      setLoading(false);
+      toast.error(currentUser.isLogoutErr, {
+        position: "top-left",
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
     }
   },[currentUser])
 
   const handleLogout = async () => {
+    setLoading(true)
     dispatch(logoutPatientAction(currentUser.email));
   }
-  
+  if(loading)
+  return (
+    <Loader color={'#00ADB5'}/>
+  )
+  else
   return (
     <div>
       <div className="relative min-h-screen md:flex">
@@ -323,6 +346,17 @@ function UserDashboard() {
         
         </div>
       </div>
+      <ToastContainer
+            position="top-left"
+            autoClose={1000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
     </div>
   );
 }

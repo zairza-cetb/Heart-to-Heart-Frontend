@@ -74,19 +74,19 @@ function Talk() {
               conversationId = data.message.data.conversationId;
               setConvId(conversationId);
             }
-            if (data.type === 'topic_response') {
-              for (let topic of data.topics) {
-                // console.log('Topic detected: ', topic.phrases)
-              }
-            }
-            if (data.type === 'insight_response') {
-              for (let insight of data.insights) {
-               // console.log('Insight detected: ', insight.payload.content);
-              }
-            }
-            if (data.type === 'message' && data.message.hasOwnProperty('punctuated')) {
-              //console.log('Live transcript: ', data.message.punctuated.transcript);
-            }
+            // if (data.type === 'topic_response') {
+            //   for (let topic of data.topics) {
+            //     // console.log('Topic detected: ', topic.phrases)
+            //   }
+            // }
+            // if (data.type === 'insight_response') {
+            //   for (let insight of data.insights) {
+            //    // console.log('Insight detected: ', insight.payload.content);
+            //   }
+            // }
+            // if (data.type === 'message' && data.message.hasOwnProperty('punctuated')) {
+            //   //console.log('Live transcript: ', data.message.punctuated.transcript);
+            // }
     
           };
     

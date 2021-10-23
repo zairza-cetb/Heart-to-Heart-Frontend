@@ -6,9 +6,11 @@ import Challenge from "../Vectors/ProblemSolving-bro.png";
 import Chat from "../Vectors/ChatBot-pana.png";
 import ChatBot from "./chat";
 import CassettePlayer from "../Vectors/CassettePlayer-pana.png";
+import { useSelector } from "react-redux";
 // import { useHistory } from "react-router-dom";
 
 function DashboardContent(props) {
+    const patientProfile = useSelector(state => state.patientReducer);
 //   let history = useHistory();
 
 //   const handleChange = () => {
@@ -67,7 +69,7 @@ function DashboardContent(props) {
           <div>
             <div className="">
               <h1 className="text-3xl md:text-5xl text-tertiary font-bold">
-                Hello Abhipsa
+                Hello {patientProfile.name}
               </h1>
               <h3 className="text-2xl md:text-xl mt-5">
                 How are you feeling today?
