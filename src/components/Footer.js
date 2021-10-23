@@ -1,3 +1,6 @@
+import React from 'react';
+
+
 function Footer() {
     return (
         <footer className="text-white body-font sm:px-20 shadow-lg bg-tertiary">

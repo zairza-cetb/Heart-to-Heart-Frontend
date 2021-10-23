@@ -1,4 +1,5 @@
 import Happy from "../Vectors/Young and happy-bro.svg"
+import React from 'react';
 
 function Contact() {
     return (
