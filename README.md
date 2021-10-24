@@ -20,7 +20,7 @@
 
 #### A Complete App for Mental Health Help
 
-[Heart-To-Heart](https://spark-healthlines.vercel.app/) is a modern-day designed, enhanced user experience, multi-functional, mobile ready app developed to help people improve their mental health and get a fresh motivation.
+[Heart-To-Heart](https://heart-to-heart-frontend.vercel.app/) is a modern-day designed, enhanced user experience, multi-functional, mobile ready app developed to help people improve their mental health and get a fresh motivation.
 
 > Many people find it difficult to reach other out for help for any mental issues,
 > they have a fear in their minds to be judged,
@@ -33,7 +33,7 @@ In our project, we have focussed on creating a platform where a person can vent 
 
 ### Demo
 
-Click [here](https://www.youtube.com/watch?v=tjcLdrwBgHY) to see the workflow of the whole project.
+Click [here](https://www.youtube.com/watch?v=t97BTRXMrhA) to see the workflow of the whole project.
 
 ### Highlights
 
