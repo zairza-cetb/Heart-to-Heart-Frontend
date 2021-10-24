@@ -133,7 +133,7 @@ function Resources() {
               </p>
             </div>
             <a
-              href="www.sangath.in"
+              href="https://sangath.in/"
               className="text-purple-600 text-center mt-6 hover:text-purple-500 underline text-sm"
             >
               Website 👉
@@ -208,7 +208,7 @@ function Resources() {
               </p>
             </div>
             <a
-              href="https://www.mitramfoundation.com"
+              href="https://www.mitramfoundation.org/"
               className="text-purple-600 text-center mt-6 hover:text-purple-500 underline text-sm"
             >
               Website 👉
@@ -282,7 +282,7 @@ function Resources() {
               </p>
             </div>
             <a
-              href="www.coonectingtrust.com"
+              href="https://connectingngo.org/"
               className="text-purple-600 text-center mt-6 hover:text-purple-500 underline text-sm"
             >
               Website 👉

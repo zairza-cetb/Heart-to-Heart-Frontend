@@ -32,7 +32,7 @@ function Hero() {
             <button onClick={()=>history.push('/signup')} className="inline-flex text-white bg-tertiary border-0 py-2 px-6 focus:outline-none hover:opacity-80 rounded-full text-lg">
               Get started
             </button>
-            <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-full text-lg">
+            <button onClick={()=>window.location.href='https://youtu.be/t97BTRXMrhA'} className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded-full text-lg">
               Demo
             </button>
           </div>

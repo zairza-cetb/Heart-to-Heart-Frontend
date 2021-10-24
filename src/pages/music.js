@@ -361,7 +361,7 @@ function Container() {
 
 function Index() {
   return (
-    <div>
+    <div className="mt-10">
       {/* <Header /> */}
       
       <div className="flex flex-col justify-center items-center px-6 py-2">
