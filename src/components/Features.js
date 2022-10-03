@@ -6,7 +6,7 @@ function Features() {
       <div className="relative container px-5 py-8 md:py-24 mx-auto">
         <div className="flex flex-wrap -m-4 text-center">
           <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-            <div className="bg-light h-full shadow-sm px-4 py-6 rounded-lg flex flex-col justify-evenly items-center">
+            <div className="bg-light h-full shadow-sm px-4 py-6 rounded-lg flex flex-col justify-evenly items-center hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -74,13 +74,13 @@ function Features() {
               <p className="text-gray-800 text-sm">
                 Private space to vent out feelings
               </p>
-              <button className="bg-tertiary p-2 whitespace-nowrap text-white rounded-full shadow-sm px-4 mt-4">
+              <button className="bg-tertiary hover:bg-tertiary-500 p-2 whitespace-nowrap text-white rounded-full shadow-sm px-4 mt-4">
                 Start here
               </button>
             </div>
           </div>
           <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-            <div className="bg-light h-full shadow-sm px-4 py-6 rounded-lg flex flex-col justify-evenly items-center">
+            <div className="bg-light h-full shadow-sm px-4 py-6 rounded-lg flex flex-col justify-evenly items-center hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -122,13 +122,13 @@ function Features() {
                 Lighten Your Mood
               </p>
               <p className="text-gray-800 text-sm">Relax with soothing music</p>
-              <button className="bg-tertiary p-2 whitespace-nowrap text-white rounded-full shadow-sm px-4 mt-4">
+              <button className="bg-tertiary hover:bg-tertiary-500 p-2 whitespace-nowrap text-white rounded-full shadow-sm px-4 mt-4">
                 Try Now
               </button>
             </div>
           </div>
           <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-            <div className="bg-light h-full shadow-sm px-4 py-6 rounded-lg flex flex-col justify-evenly items-center">
+            <div className="bg-light h-full shadow-sm px-4 py-6 rounded-lg flex flex-col justify-evenly items-center hover:shadow-lg">
               <img
                 className="inline-block w-12 h-12 mb-3"
                 src="https://img.icons8.com/color/48/000000/personal-trainer-skin-type-2.png"
@@ -138,13 +138,13 @@ function Features() {
               <p className="text-gray-800 text-sm">
                 Anonymously from experienced therapists
               </p>
-              <button className="bg-tertiary p-2 whitespace-nowrap text-white rounded-full shadow-sm px-4 mt-4">
+              <button className="bg-tertiary hover:bg-tertiary-500 p-2 whitespace-nowrap text-white rounded-full shadow-sm px-4 mt-4">
                 Get Started
               </button>
             </div>
           </div>
           <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-            <div className="bg-light h-full shadow-sm px-4 py-6 rounded-lg flex flex-col justify-evenly items-center">
+            <div className="bg-light h-full shadow-sm px-4 py-6 rounded-lg flex flex-col justify-evenly items-center hover:shadow-lg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -200,7 +200,7 @@ function Features() {
               <p className="text-gray-800 text-sm">
                 Improve your mental health
               </p>
-              <button className="bg-tertiary p-2 whitespace-nowrap text-white rounded-full shadow-sm px-4 mt-4">
+              <button className="bg-tertiary hover:bg-tertiary-500 p-2 whitespace-nowrap text-white rounded-full shadow-sm px-4 mt-4">
                 Start Now
               </button>
             </div>

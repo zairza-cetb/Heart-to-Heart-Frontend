@@ -7,6 +7,7 @@ module.exports = {
         'primary': '#eff88f',
         'secondary': '#eff88f',
         'tertiary': '#00ADB5',
+        'tertiary-500': '#029ea6',
         'light': '#EEEEEE',
         'saffron': '#FF5722',
         
