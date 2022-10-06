@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/CardStyles.css"
 import FeelingBlue from "../Vectors/Feeling Blue-bro.svg";
 import TrueFriends from "../Vectors/Solidarity-cuate.png";
 // import Conversation from "../Vectors/Conversation-pana.png";
@@ -282,103 +283,67 @@ function DashboardContent(props) {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 grid-rows-3 lg:grid-rows-1 gap-4 mb-20">
-        <div className="bg-white rounded-lg flex flex-col container px-5 py-8 mx-auto items-center">
-          <h4 className="text-2xl font-semibold text-tertiary hover:underline cursor-pointer">
-            OUR THERAPISTS
-          </h4>
-          <br />
-          <p className="text-lg text-center text-gray-700">
-            Together, we will find the life-balance you have been looking for.
-            We are passionate about helping others improve their mental and
-            emotional wellness. We will help you develop coping skills and tools
-            so you can change your thoughts, emotions, and behaviors.
-          </p>
-          <br />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-10 w-10 mt-2 text-tertiary animate-bounce"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-            />
-          </svg>
-        </div>
-        <div className="bg-white rounded-lg">
-          <div className="bg-white rounded-lg flex flex-col container px-5 py-8 mx-auto items-center">
-            <h4
-              className="text-2xl font-semibold text-tertiary hover:underline text-center cursor-pointer"
-              onClick={()=>handleTab(6)}
-            >
-              PEN DOWN YOUR THOUGHTS
-            </h4>
-            <br />
-            <p className="text-lg text-center text-gray-700">
-              Writing about your struggles and your share of ups and down will
-              not only give you perspective but also inspire and motivate others
-              out there that may be going through the same struggles day in and
-              day out without knowing that it will get better.
-            </p>
-            <br />
-            <svg
-            onClick={()=>handleTab(6)}
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10 mt-2 text-tertiary animate-bounce"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </div>
-        </div>
-        <div className="bg-white rounded-lg">
-          <div className="bg-white rounded-lg flex flex-col container px-5 py-8 mx-auto items-center">
-            <h4
-              className="text-2xl font-semibold text-tertiary hover:underline text-center cursor-pointer"
-              onClick={()=>handleTab(3)}
-            >
-              CHECK YOUR EMOTIONAL CURVE
-            </h4>
-            <br />
-            <p className="text-lg text-center text-gray-700">
-              Emotional Curve is our ability to recognize, understand, and
-              regulate our emotions and to respond to those emotions in
-              constructive ways that allow us to communicate, empathize with
-              others, and overcome challenges. In other words, it is being tuned
-              into our emotional world and honing the ability to manage our
-              emotions before our emotions manage us.
-            </p>
-            <br />
-            <svg
-               onClick={()=>handleTab(3)}
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10 mt-2 text-tertiary animate-bounce"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-          </div>
-        </div>
-      </div>
+      <div className="wrapper">
+				<div className="card">
+					<img src={Chat} alt="Our Therapists" />
+					<div className="info rounded-lg flex flex-col container px-5 py-8 mx-auto items-center top-0 left-0 w-100%">
+						<h4 className="text-2xl font-semibold text-tertiary hover:underline cursor-pointer">OUR THERAPISTS</h4>
+						<br />
+						<p className="text-lg text-left text-black">
+							Together, we will find the life-balance you have been looking for. We are passionate about helping others improve their mental and emotional wellness. We will help you
+							develop coping skills and tools so you can change your thoughts, emotions, and behaviors.
+						</p>
+						<br />
+						<button href="/userdashboard" className="btn bg-tertiary flex justify-center items-center gap-2 h-11">
+							Read More
+							<svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mt-2 text-white animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div className="card">
+					<img src={CassettePlayer} alt="Pen Down Your Thoughts" />
+					<div className="info rounded-lg flex flex-col container px-5 py-8 mx-auto items-center top-0 left-0 w-100%">
+						<h4 className="text-2xl font-semibold text-tertiary hover:underline cursor-pointer" onClick={() => handleTab(6)}>
+							PEN DOWN YOUR THOUGHTS
+						</h4>
+						<br />
+						<p className="text-lg text-left text-black">
+							Writing about your struggles and your share of ups and down will not only give you perspective but also inspire and motivate others out there that may be going through the
+							same struggles day in and day out without knowing that it will get better.
+						</p>
+						<br />
+						<button href="/userdashboard" className="btn bg-tertiary flex justify-center items-center gap-2 h-11 text-white" onClick={() => handleTab(6)}>
+							Read More
+							<svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mt-2 text-white animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div className="card">
+					<img src={TrueFriends} alt="Check your emotional curve" />
+					<div className="info rounded-lg flex flex-col container px-5 py-8 mx-auto items-center top-0 left-0 w-100%">
+						<h4 className="text-2xl font-semibold text-tertiary hover:underline cursor-pointer" onClick={() => handleTab(3)}>
+							CHECK YOUR EMOTIONAL CURVE
+						</h4>
+						<br />
+						<p className="text-lg text-left text-black">
+							Emotional Curve is our ability to recognize, understand, and regulate our emotions and to respond to those emotions in constructive ways that allow us to communicate,
+							empathize with others, and overcome challenges. In other words, it is being tuned into our emotional world and honing the ability to manage our emotions before our emotions
+							manage us.
+						</p>
+						<br />
+						<button href="/userdashboard" className="btn bg-tertiary flex justify-center items-center gap-2 h-11" onClick={() => handleTab(3)}>
+							Read More
+							<svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mt-2 text-white animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
     </div>
   );
 }
