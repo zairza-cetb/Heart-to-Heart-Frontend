@@ -20,9 +20,15 @@ function UserDashboard() {
   const dispatch = useDispatch();
   const [tab, setTab] = useState(1);
   const [loading,setLoading] = useState(false);
+  const [isHidden,setIsHidden] = useState(true)
   // const [open, setOpen] = React.useState(
   //   "sidebar bg-white w-60 text-secondary-100 px-2 fixed inset-y-0 left-0 transform -translate-x-full md:translate-x-0 transition duration-200 ease-in-out"
   // );
+
+  const toogleHandler = () => {
+    console.log('hiot')
+    setIsHidden(!isHidden)
+  }
 
   useEffect(()=>{
     function func(){
@@ -80,9 +86,10 @@ function UserDashboard() {
   return (
     <div>
       <div className="relative min-h-screen md:flex">
-        <div className="menu-button bg-white flex justify-between md:hidden p-5">
+        
+        <div className=" menu-button bg-white flex justify-between md:hidden p-5">
           <a href="/userdashboard" className="logo p-4 block font-medium text-tertiary flex">
-            <h1 className="text-xl font-bold hidden md:block">Heart-to-Heart</h1>
+            <h1 className="text-xl font-extrabold  md:block">Heart-to-Heart</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -97,8 +104,13 @@ function UserDashboard() {
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
             </svg>
           </a>
-          <div className="mt-5">
-            <span className="material-icons-outlined flex">
+          <button onClick={toogleHandler} data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+        </div>
+          <div className={`w-full md:block md:w-auto mb-5 ${isHidden?"hidden":"null"}`} id="navbar-default">
+            <span className="material-icons-outlined flex justify-around">
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -183,7 +195,6 @@ function UserDashboard() {
           
             </span>
           </div>
-        </div>
 
         <div className="sidebar bg-white w-60 text-secondary-100 px-2 fixed inset-y-0 left-0 transform -translate-x-full md:translate-x-0 transition duration-200 ease-in-out">
           <div className="logo text-xl font-extrabold text-tertiary px-4 mt-5 flex p-5 bg-white">
