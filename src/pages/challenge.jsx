@@ -145,11 +145,10 @@ const Challenge = () => {
                     Start the challenge
                 </button>
             </div>
-            <div className="hidden md:flex justify-start mt-4" style={{ zIndex: -1 }}>
+            <div className="absolute bottom-0 hidden sm:flex justify-start mt-4 sm:z-[10]">
                 <LottieAnimation
                     lotti={backgroundAnimation}
                     height={400}
-                    width={900}
                 />
             </div>
             
